@@ -1,0 +1,9 @@
+{
+  "run": "ro_worstsite",
+  "kind": "RO",
+  "eps": 0.0,
+  "mu": 8.0,
+  "budget": 312,
+  "status": "infeasible",
+  "note": "no stable design within sum c = 312"
+}

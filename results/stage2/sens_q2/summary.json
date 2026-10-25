@@ -1,0 +1,15 @@
+{
+  "run": "sens_q2",
+  "kind": "sensitivity",
+  "eps": 0.045000000000000026,
+  "mu": 8.0,
+  "budget": 312,
+  "status": "optimal",
+  "objective": 338.3169061702958,
+  "capex": 312.0,
+  "gamma": 82.11016831736254,
+  "total_c": 312,
+  "active_sites": 78,
+  "solve_s": 2.7177186569999776,
+  "solver": "highs"
+}

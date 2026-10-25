@@ -1,0 +1,15 @@
+{
+  "run": "ro_inflated_free",
+  "kind": "RO (no budget)",
+  "eps": 0.0,
+  "mu": 8.0,
+  "budget": null,
+  "status": "optimal",
+  "objective": 219.78595205745341,
+  "capex": 195.0,
+  "gamma": 0.0,
+  "total_c": 195,
+  "active_sites": 78,
+  "solve_s": 0.07486817599988171,
+  "solver": "highs"
+}

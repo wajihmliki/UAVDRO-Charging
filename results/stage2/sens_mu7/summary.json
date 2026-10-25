@@ -1,0 +1,15 @@
+{
+  "run": "sens_mu7",
+  "kind": "sensitivity",
+  "eps": 0.045000000000000026,
+  "mu": 7.0,
+  "budget": 312,
+  "status": "optimal",
+  "objective": 330.7797758024477,
+  "capex": 312.0,
+  "gamma": 73.76878422278523,
+  "total_c": 312,
+  "active_sites": 78,
+  "solve_s": 1.6889943249998396,
+  "solver": "highs"
+}

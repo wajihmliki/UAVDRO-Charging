@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Queue-Constrained Wasserstein Distributionally Robust Optimization for UAV Charging Network Design"
+authors:
+  - family-names: Imliki
+    given-names: Wajih
+    affiliation: "Korea Advanced Institute of Science and Technology (KAIST)"
+  - family-names: Deresa
+    given-names: Chala Adane
+    affiliation: "Korea Advanced Institute of Science and Technology (KAIST)"
+  - family-names: Choi
+    given-names: Han-Lim
+    affiliation: "Korea Advanced Institute of Science and Technology (KAIST)"

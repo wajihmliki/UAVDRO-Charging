@@ -1,0 +1,15 @@
+{
+  "run": "dro_eps0.09",
+  "kind": "DRO",
+  "eps": 0.09000000000000005,
+  "mu": 8.0,
+  "budget": 312,
+  "status": "optimal",
+  "objective": 327.00053237926676,
+  "capex": 312.0,
+  "gamma": 40.93349244374515,
+  "total_c": 312,
+  "active_sites": 78,
+  "solve_s": 3.658597504999989,
+  "solver": "highs"
+}

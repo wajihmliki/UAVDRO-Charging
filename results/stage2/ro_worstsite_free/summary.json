@@ -1,0 +1,15 @@
+{
+  "run": "ro_worstsite_free",
+  "kind": "RO (no budget)",
+  "eps": 0.0,
+  "mu": 8.0,
+  "budget": null,
+  "status": "optimal",
+  "objective": 648.5794642857143,
+  "capex": 410.0,
+  "gamma": 0.0,
+  "total_c": 410,
+  "active_sites": 78,
+  "solve_s": 0.07534885900008703,
+  "solver": "highs"
+}

@@ -1,0 +1,60 @@
+# Shanghai instance — every parameter used in the paper lives here.
+city: shanghai
+paths:
+  raw_deliveries: data/raw/delivery_shanghai.csv
+  processed: data/processed          # Phase 1/2 outputs (committed, ~8 MB)
+  footprint: data/reference/footprint_stage1.csv   # frozen Stage-1 result (78 sites)
+  results: results
+
+phase1:
+  date_col: ds
+  time_col: delivery_time
+  lat_col: delivery_gps_lat
+  lng_col: delivery_gps_lng
+  date_is_serial: true               # LaDe `ds` is MMDD; mapped to consecutive dates from the anchor
+  serial_anchor: "2025-01-01"
+  h3_res: 9
+  slot_min: 30
+  topk_sites: 150                    # candidate pool |J|
+  uav_speed_kmh: 72.0
+  overhead_min: 2.0
+  topk_map: 6                        # K nearest sites per cell (arcs P)
+
+stage1:                              # Appendix A
+  install_cost: 25.0                 # f_j
+  pi_unmet: 50.0
+  open_cap: 80
+  quick: {topk_use: 4, max_contingencies: 40, keep_top_u: 8000, mip_gap: 0.20}
+  full:  {topk_use: 6, max_contingencies: 60, mip_gap: 0.05}
+  threads: 16
+  warm_start: 80
+
+stage2:                              # Section III–IV
+  mu: 8.0                            # charges / hour / charger
+  beta: 0.95                         # utilisation cap
+  c_max: 16
+  rate_mode: peak_hour               # peak_hour: each site's busiest hour-of-day (mean over days)
+                                     # daily24  : daily deliveries / hours_per_day (paper v1 rule)
+  hours_per_day: 24
+  max_travel_min: 20.0               # cell->site arcs longer than this are pruned
+  total_chargers: 312                # fixed budget (= 4 x 78)
+  stress: {topk: 10, alphas: [0.03, 0.06]}
+  ro_inflation: 1.2
+  pwl_breakpoints: [0.10, 0.30, 0.50, 0.70, 0.85, 0.95]
+  pwl_coeffs:      [0.0, 0.5, 2.0, 6.0, 20.0, 80.0]
+  eps_multipliers: [1.0e-6, 0.5, 1.0, 2.0]   # first entry is absolute (10^-6), others x eps_hat
+  solver: highs
+  threads: 16
+  mip_gap: 1.0e-4                  # tight: with a fixed budget the objective is 312 + a small penalty
+
+evaluation:
+  baseline_c: 4
+  sim_hours: 24
+  sim_seeds: [123, 124, 125, 126, 127]
+  upgrade_target_rho: 0.85
+  upgrade_top_n: 7
+  outage_pairs: auto                 # auto = (h1,h2) and (h1,h3) by demand; or [[S0072,S0005],...]
+  sensitivity_mu: [7.0, 8.0, 9.0]
+  scaling_k: [1, 2, 5, 10, 15]
+  scaling_repeats: 3
+  scaling_mip_gap: 0.02              # paper setting; with 1e-4 the k=5 instance already takes ~1 min

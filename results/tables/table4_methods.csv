@@ -1,0 +1,10 @@
+method,total_c,active_sites,p95_min,p95_sim_min,unstable,unstable_worstR
+Deterministic (uniform c=4),312.0,78.0,5.7663145135557965,5.832102356385444,6.0,8.0
+RO - 1.2x inflation (312),312.0,78.0,2.935180448519978,2.834187701962398,0.0,2.0
+RO - 1.2x inflation (no budget),195.0,78.0,17.771468663093806,17.28186370950489,0.0,2.0
+RO - worst-site (312) - infeasible,,,,,,
+RO - worst-site (no budget),410.0,78.0,0.0,0.0,0.0,0.0
+"DRO (eps = 0.5 eps_hat, 312)",312.0,78.0,1.9504990031714795,1.9604020855585504,0.0,0.0
+"DRO (eps = 0.5 eps_hat, no budget)",206.0,78.0,40.39125912562971,31.551353829592063,0.0,0.0
+DRO + targeted upgrade,318.0,78.0,1.7547173352974197,1.6964215868595691,0.0,0.0
+Uniform + targeted upgrade (Table 3 rule),356.0,78.0,3.245320680336956,2.965277029780897,0.0,2.0
