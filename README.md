@@ -1,8 +1,8 @@
 # Queue-Constrained Wasserstein DRO for UAV Charging-Network Design
 
-
-> W. Imliki, C. A. Deresa, H.-L. Choi, *Queue-Constrained Wasserstein Distributionally Robust
-> Optimization for UAV Charging Network Design*, KAIST.
+Update for the paper presented at AIAA AVIATION 2026
+> Queue-Constrained Wasserstein Distributionally Robust Optimization for UAV Charging Network Design
+Wajih Imliki*, Chala Adane Deresa†, and Han-Lim Choi
 
 The framework has two stages:
 
