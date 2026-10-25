@@ -2,9 +2,13 @@
 
 ## Raw input (not committed)
 
-The study uses the **Shanghai delivery split of LaDe** (Cainiao-AI, *LaDe: The First
-Comprehensive Last-mile Delivery Dataset from Industry*, KDD 2024), distributed on Hugging Face
-under `Cainiao-AI/LaDe`. Download the Shanghai **delivery** table and save it as
+The study uses the **Shanghai delivery table of LaDe**, released by Cainiao:
+
+- Dataset: <https://huggingface.co/datasets/Cainiao-AI/LaDe>
+- Paper: L. Wu *et al.*, "LaDe: The First Comprehensive Last-mile Express Dataset from
+  Industry," *Proc. ACM SIGKDD*, 2024 (BibTeX in the top-level README).
+
+The raw files are **not redistributed here**. Download the Shanghai **delivery** table and save it as
 
     data/raw/delivery_shanghai.csv
 

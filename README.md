@@ -44,6 +44,26 @@ Everything from Stage 2 onward runs from committed data using the free HiGHS sol
 
 All parameters live in [`configs/shanghai.yaml`](configs/shanghai.yaml).
 
+## Data source
+
+The raw input is the Shanghai delivery table of **LaDe**, a public last-mile delivery dataset
+released by Cainiao. It is **not included** in this repository. Download it from Hugging Face
+([`Cainiao-AI/LaDe`](https://huggingface.co/datasets/Cainiao-AI/LaDe)) and place it at
+`data/raw/delivery_shanghai.csv`; [data/README.md](data/README.md) has the details. The
+repository ships only derived, aggregated data (`data/processed/`: delivery counts per H3 cell
+and 30-min slot), so Stage 2 onward runs without the raw file.
+
+If you use the data, please cite LaDe:
+
+```bibtex
+@inproceedings{wu2024lade,
+  title     = {LaDe: The First Comprehensive Last-mile Express Dataset from Industry},
+  author    = {Wu, Lixia and others},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  year      = {2024}
+}
+```
+
 ## Which script produces what
 
 | Paper item | Script | Output |
@@ -140,6 +160,10 @@ scripts/01..08_*.py        pipeline steps
 results/                   generated tables, figures and designs (committed for reference)
 tests/                     unit tests
 ```
+
+## License
+
+Code: [MIT](LICENSE). The LaDe data remains under its own terms; see the dataset page.
 
 ## Solvers
 
