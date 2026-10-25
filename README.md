@@ -1,6 +1,5 @@
 # Queue-Constrained Wasserstein DRO for UAV Charging-Network Design
 
-Code and data to reproduce
 
 > W. Imliki, C. A. Deresa, H.-L. Choi, *Queue-Constrained Wasserstein Distributionally Robust
 > Optimization for UAV Charging Network Design*, KAIST.
