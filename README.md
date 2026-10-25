@@ -138,15 +138,6 @@ numbers differ from the first draft.
     - on top of the DRO design (Table 4 row, `upgrade_dro`);
     - on top of uniform c = 4, following the draft's Table 3 rule (`upgrade_uniform`).
 
-Two caveats remain:
-
-- **p95 covers stable sites only.** The system p95 is taken over stable sites, as in the paper,
-  and unstable sites are counted separately. Always read p95 together with the unstable count:
-  uniform c = 6 shows a *higher* p95 than c = 4 only because c = 4 drops 6 overloaded sites from
-  the p95.
-- **Loose McCormick envelope.** Constraints (12)–(15) linearise w = c·u for an *integer* c ∈ [0, 16],
-  so the envelope is not exact and the queue penalty Q is a relaxation. Stability no longer depends
-  on it (see change 4). An exact version would expand c into binaries.
 
 ## Layout
 
